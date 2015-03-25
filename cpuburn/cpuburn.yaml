@@ -1,0 +1,26 @@
+metadata:
+    name: cpuburn-arm
+    format: "Lava-Test-Shell Test Definition 1.0"
+    description: "A collection of cpuburn programs tuned for different ARM hardware"
+    maintainer:
+        - tyler.baker@linaro.org
+    os:
+        - ubuntu
+    devices:
+        - cubieboard3
+
+install:
+    deps:
+        - ruby
+        - git
+        - curl
+        - build-essential
+        - libjpeg-turbo-progs
+        - python
+run:
+    steps:
+        - 'cd /tmp'
+        - 'export GIT_SSL_NO_VERIFY=1'
+        - 'lava-test-case clone-cpuburn --shell git clone https://github.com/ssvb/cpuburn-arm.git'
+        - 'cd cpuburn-arm'
+        - 'python cpuburn-wrapper.py'
