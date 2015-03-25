@@ -23,5 +23,5 @@ run:
         - 'export GIT_SSL_NO_VERIFY=1'
         - 'lava-test-case clone-cpuburn --shell git clone https://github.com/ssvb/cpuburn-arm.git'
         - 'cd cpuburn-arm'
-        - 'curl -k https://raw.githubusercontent.com/EmbeddedAndroid/kernel-ci-tests/master/cpuburn/cpuburn-wrapper.py > cpuburn-wrapper.py'
+        - 'curl -k https://raw.githubusercontent.com/EmbeddedAndroid/kernel-ci-tests/master/cpuburn-arm/cpuburn-wrapper.py > cpuburn-wrapper.py'
         - 'python cpuburn-wrapper.py'
