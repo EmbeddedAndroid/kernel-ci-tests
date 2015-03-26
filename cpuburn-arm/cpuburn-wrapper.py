@@ -12,11 +12,11 @@ for line in iter(proc.stdout.readline, ''):
     if match:
         test_case = match.group().replace(" ", "")
         if 'OK' in current_line:
-            test_result = 'cpu_' + str(cpu) + '_' + test_case + ' : ' + 'pass'
+            test_result = 'cpu' + str(cpu) + '_' + test_case + ' : ' + 'pass'
             print test_result
         elif 'SKIPPED' in current_line:
-            test_result = 'cpu_' + str(cpu) + '_' + test_case + ' : ' + 'skip'
+            test_result = 'cpu' + str(cpu) + '_' + test_case + ' : ' + 'skip'
             print test_result
         else:
-            test_result = 'cpu_' + str(cpu) + '_' + test_case + ' : ' + 'fail'
+            test_result = 'cpu' + str(cpu) + '_' + test_case + ' : ' + 'fail'
             print test_result
