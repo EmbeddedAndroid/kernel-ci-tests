@@ -1,5 +1,5 @@
 metadata:
-    name: cpuburn-arm
+    name: cpufreq-ljt-stress-test
     format: "Lava-Test-Shell Test Definition 1.0"
     description: "A collection of cpuburn programs tuned for different ARM hardware"
     maintainer:
@@ -23,5 +23,5 @@ run:
         - 'export GIT_SSL_NO_VERIFY=1'
         - 'git clone https://github.com/ssvb/cpuburn-arm.git'
         - 'cd cpuburn-arm'
-        - 'curl -k https://raw.githubusercontent.com/EmbeddedAndroid/kernel-ci-tests/master/cpuburn-arm/cpuburn-wrapper.py > cpuburn-wrapper.py'
-        - 'python cpuburn-wrapper.py'
+        - 'curl -k https://raw.githubusercontent.com/EmbeddedAndroid/kernel-ci-tests/master/cpufreq-ljt-stress-test/cpufreq-ljt-stress-test-wrapper.py > cpufreq-ljt-stress-test-wrapper.py'
+        - 'python cpufreq-ljt-stress-test-wrapper.py'
